@@ -31,10 +31,15 @@ def user_interaction(index=0):
 
         # print(usr_input)
 
-        if usr_input in ['store hours', 'pharmacy', 'representative']:
+        if usr_input in ['store hours', 'pharmacy', 'representative']: # Known command
             play_async('success')
             sleep(1)
-
+        elif usr_input == 'error - no sound input': # Fail command - no mic audio taken
+            play_wait('error')
+            say("I didn't hear you say anything. Please speak into the microphone, and let's try again.")
+            user_interaction(index + 1)
+        
+        # If the returned result for user_input was not a fail, then route command accordingly
         if usr_input == 'store hours':
             say("Our store hours are 7 AM to 9 PM on weekends, and 10 AM to 11 PM on weekdays.")
         elif usr_input == 'pharmacy':

@@ -9,6 +9,9 @@ def dictate():
         r.adjust_for_ambient_noise(source)
         audio = r.listen(source)
 
-    user_said = r.recognize_google(audio)
+    try:
+        user_said = r.recognize_google(audio)
+    except:
+        return "error - no sound input"
 
     return str(user_said)
