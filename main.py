@@ -2,10 +2,13 @@ import dictate
 from sound_manager import play_async, play_wait
 from time import sleep
 from tts import say
+import image_manager
 
 script_1 = '''Please say store hours, pharmacy, or representative, and I will connect you.'''
 script_2 = '''Please say your choice after the tone.'''
 
+image_manager.open('CVS')
+sleep(1) # Delay for image to open
 play_wait("ring")
 say("Welcome to CVS pharmacies.")
 say("I am an automated telephone assistant that can help you with what you need.")
@@ -60,3 +63,4 @@ def user_interaction(index=0):
 
 if __name__ == '__main__':
     user_interaction()
+    image_manager.kill()
