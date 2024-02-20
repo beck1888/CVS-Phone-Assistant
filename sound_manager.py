@@ -4,7 +4,8 @@ sound_lookup = {
     #name : filepath
     "error":"sounds/error.mp3",
     "record":"sounds/recording.mp3",
-    "success":"sounds/allow.mp3"
+    "success":"sounds/allow.mp3",
+    "ring":"sounds/phone_ring.mp3"
 }
 
 def play_wait(sound):

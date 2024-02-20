@@ -22,7 +22,8 @@ Since this project is a personal demo, I haven't been keeping tabs on this. I kn
 
 Besides that, you may use the code I have written however you want.
 
-## Goals
+## To-DO
+- Add comments for clarity
 - Add sound effects for the phone being transferred
 - Find a less obnoxious voice
 - Implement an infinite on-hold simulator
