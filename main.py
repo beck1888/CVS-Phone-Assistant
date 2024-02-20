@@ -9,7 +9,7 @@ script_2 = '''Please say your choice after the tone.'''
 
 image_manager.open('CVS')
 sleep(1) # Delay for image to open
-play_wait("ring")
+play_wait("jingle")
 say("Welcome to CVS pharmacies.")
 say("I am an automated telephone assistant that can help you with what you need.")
 sleep(1/5)
@@ -18,7 +18,7 @@ sleep(0.2)
 say(script_2)
 
 def user_interaction(index=0):
-    if index > 2:
+    if index == 2:
         say("I'm having trouble understanding you. I'm connecting you to a representative who may be able to assist you better.")
         play_wait("ring")
     else:
@@ -39,7 +39,8 @@ def user_interaction(index=0):
             sleep(1)
         elif usr_input == 'error - no sound input': # Fail command - no mic audio taken
             play_wait('error')
-            say("I didn't hear you say anything. Please speak into the microphone, and let's try again.")
+            if index != 1:
+                say("I didn't hear you say anything. Please speak into the microphone, and let's try again.")
             user_interaction(index + 1)
         
         # If the returned result for user_input was not a fail, then route command accordingly

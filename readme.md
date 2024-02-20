@@ -23,6 +23,7 @@ Since this project is a personal demo, I haven't been keeping tabs on this. I kn
 Besides that, you may use the code I have written however you want.
 
 ## To-DO
+- Fix error handling to not repeat irrelevant things
 - Add comments for clarity
 - Add sound effects for the phone being transferred
 - Find a less obnoxious voice

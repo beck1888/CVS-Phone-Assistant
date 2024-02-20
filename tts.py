@@ -7,5 +7,3 @@ def say(text):
     engine.setProperty('voice', voices[113].id)
     engine.say(text)
     engine.runAndWait()
-
-say("balls")
