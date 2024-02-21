@@ -4,6 +4,9 @@
 In my comp sci class I had a text based version of this project as a quiz question. I thought it would be cool to turn it into a live demo.
 
 ## Dependencies
+
+**THIS PROJECT IS DESIGNED FOR MACOS ONLY**
+
 This project uses multiple non-standard Python libraries including:
 
 1. `pyttsx3`
