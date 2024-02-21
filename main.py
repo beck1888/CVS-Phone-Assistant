@@ -10,12 +10,7 @@ script_2 = '''Please say your choice after the tone.'''
 image_manager.open('CVS')
 sleep(1) # Delay for image to open
 play_wait("jingle")
-say("Welcome to CVS pharmacies.")
-say("I am an automated telephone assistant that can help you with what you need.")
-sleep(1/5)
-say(script_1)
-sleep(0.2)
-say(script_2)
+play_wait("welcome")
 
 def user_interaction(index=0):
     if index == 2:

@@ -6,7 +6,14 @@ sound_lookup = {
     "record":"sounds/recording.mp3",
     "success":"sounds/allow.mp3",
     "ring":"sounds/phone_ring.mp3",
-    "jingle":"sounds/jingle.mp3"
+    "jingle":"sounds/jingle.mp3",
+    "pharm_connect":"speech/connect_pharmacy.mp3",
+    "rep_connect":"speech/connect_representative.mp3",
+    "not_quite":"speech/didn't_quite_get.mp3",
+    "hours":"speech/hours.mp3",
+    "no_sound":"speech/no_sound.mp3",
+    "trouble":"speech/trouble.mp3",
+    "welcome":"speech/welcome.mp3"
 }
 
 def play_wait(sound):
