@@ -4,7 +4,7 @@ from time import sleep
 from tts import say
 import image_manager
 
-# image_manager.open('CVS')
+image_manager.open('CVS')
 sleep(1) # Delay for image to open
 play_wait("jingle")
 play_wait("welcome")
@@ -43,4 +43,4 @@ def user_interaction(index=0):
 
 if __name__ == '__main__':
     user_interaction()
-    # image_manager.kill()
+    image_manager.kill()
