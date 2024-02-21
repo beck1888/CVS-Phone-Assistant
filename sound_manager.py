@@ -13,7 +13,8 @@ sound_lookup = {
     "hours":"speech/hours.mp3",
     "no_sound":"speech/no_sound.mp3",
     "trouble":"speech/trouble.mp3",
-    "welcome":"speech/welcome.mp3"
+    "welcome":"speech/welcome.mp3",
+    "difficult":"speech/difficult.mp3",
 }
 
 def play_wait(sound):

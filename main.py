@@ -4,9 +4,6 @@ from time import sleep
 from tts import say
 import image_manager
 
-script_1 = '''Please say store hours, pharmacy, or representative, and I will connect you.'''
-script_2 = '''Please say your choice after the tone.'''
-
 image_manager.open('CVS')
 sleep(1) # Delay for image to open
 play_wait("jingle")
@@ -14,7 +11,7 @@ play_wait("welcome")
 
 def user_interaction(index=0):
     if index == 2:
-        say("I'm having trouble understanding you. I'm connecting you to a representative who may be able to assist you better.")
+        play_wait("trouble")
         play_wait("ring")
     else:
        # collect input
@@ -35,17 +32,17 @@ def user_interaction(index=0):
         elif usr_input == 'error - no sound input': # Fail command - no mic audio taken
             play_wait('error')
             if index != 1:
-                say("I didn't hear you say anything. Please speak into the microphone, and let's try again.")
+                play_wait("no_sound")
             user_interaction(index + 1)
         
         # If the returned result for user_input was not a fail, then route command accordingly
         if usr_input == 'store hours':
-            say("Our store hours are 7 AM to 9 PM on weekends, and 10 AM to 11 PM on weekdays.")
+            play_wait("hours")
         elif usr_input == 'pharmacy':
-            say("I am connecting you to our pharmacy now.")
+            play_wait("pharm_connect")
             play_wait("ring")
         elif usr_input == 'representative':
-            say("I am connecting you to a representative now.")
+            play_wait("rep_connect")
             play_wait("ring")
         else:
             play_async("error")
@@ -54,7 +51,7 @@ def user_interaction(index=0):
                 say("It's difficult to understand you. Let's try one more time. Please say that again.")
             else:
                 if index != 2:
-                    say("I didn't quite get that. Please say it again.")
+                    play_wait("difficult")
             user_interaction(index + 1)
 
 if __name__ == '__main__':
